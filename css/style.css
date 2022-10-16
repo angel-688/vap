@@ -583,7 +583,7 @@ textarea.input {
   margin-top: 0.875rem;
 }
 
-.title-block__box {
+.title-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1233,6 +1233,46 @@ textarea.input {
   transition: border 0.3s ease 0s;
 }
 
+.top-main__button::before {
+  -webkit-transform: translate(0%, 5%);
+      -ms-transform: translate(0%, 5%);
+          transform: translate(0%, 5%);
+}
+
+@-webkit-keyframes moveArrowMain {
+  0% {
+    -webkit-transform: translate(0%, 5%);
+            transform: translate(0%, 5%);
+  }
+
+  50% {
+    -webkit-transform: translate(40%, 5%);
+            transform: translate(40%, 5%);
+  }
+
+  100% {
+    -webkit-transform: translate(0%, 5%);
+            transform: translate(0%, 5%);
+  }
+}
+
+@keyframes moveArrowMain {
+  0% {
+    -webkit-transform: translate(0%, 5%);
+            transform: translate(0%, 5%);
+  }
+
+  50% {
+    -webkit-transform: translate(40%, 5%);
+            transform: translate(40%, 5%);
+  }
+
+  100% {
+    -webkit-transform: translate(0%, 5%);
+            transform: translate(0%, 5%);
+  }
+}
+
 .top-main__hashtags {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1731,7 +1771,7 @@ textarea.input {
 }
 
 .filter-head__form-box:not(:last-child) {
-  margin-bottom: 0.9375rem;
+  margin-bottom: 0.3125rem;
 }
 
 .filter-head__open-button {
@@ -1846,7 +1886,7 @@ textarea.input {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  min-width: 18.125rem;
+  min-width: 10rem;
 }
 
 .form-filter-head__item-box {
@@ -2245,7 +2285,11 @@ textarea.input {
 
 @media (min-width: 87.5em) {
   .arrow_prev {
-    padding-left: 0.0000000625rem;
+    margin-left: 0.0000000625rem;
+  }
+
+  .arrow_next {
+    margin-right: 0.0000000625rem;
   }
 
   .header__navigation {
@@ -2290,7 +2334,7 @@ textarea.input {
     font-size: 1.875rem;
   }
 
-  .title-block__box {
+  .title-block {
     font-size: 1.875rem;
   }
 
@@ -2433,7 +2477,11 @@ textarea.input {
 
 @media (max-width: 62em) {
   .arrow_prev {
-    padding-left: -1.875rem;
+    margin-left: -0.625rem;
+  }
+
+  .arrow_next {
+    margin-right: -0.625rem;
   }
 
   .form-filter-head__reset,
@@ -2490,7 +2538,7 @@ textarea.input {
     font-size: 1.5625rem;
   }
 
-  .title-block__box {
+  .title-block {
     font-size: 1.5625rem;
   }
 
@@ -3011,13 +3059,13 @@ textarea.input {
 }
 
 @supports (font-size: clamp( 1.5625rem , 1.4724099099rem  +  0.4504504505vw , 1.875rem )) {
-    .title-block__box {
+    .title-block {
       font-size: clamp( 1.5625rem , 1.4724099099rem  +  0.4504504505vw , 1.875rem );
     }
 }
 
 @supports not (font-size: clamp( 1.5625rem , 1.4724099099rem  +  0.4504504505vw , 1.875rem )) {
-    .title-block__box {
+    .title-block {
       font-size: calc(1.5625rem + 0.3125 * (100vw - 20rem) / 69.375);
     }
 }
@@ -3376,15 +3424,27 @@ textarea.input {
 }
 
 @media (min-width: 62em) and (max-width: 87.5em) {
-@supports (padding-left: clamp( -1.875rem , -6.4338236814rem  +  7.3529414216vw , 0.0000000625rem )) {
+@supports (margin-left: clamp( -0.625rem , -2.1446079951rem  +  2.4509806373vw , 0.0000000625rem )) {
     .arrow_prev {
-      padding-left: clamp( -1.875rem , -6.4338236814rem  +  7.3529414216vw , 0.0000000625rem );
+      margin-left: clamp( -0.625rem , -2.1446079951rem  +  2.4509806373vw , 0.0000000625rem );
     }
 }
 
-@supports not (padding-left: clamp( -1.875rem , -6.4338236814rem  +  7.3529414216vw , 0.0000000625rem )) {
+@supports not (margin-left: clamp( -0.625rem , -2.1446079951rem  +  2.4509806373vw , 0.0000000625rem )) {
     .arrow_prev {
-      padding-left: calc(-1.875rem + 1.8750000625 * (100vw - 62rem) / 25.5);
+      margin-left: calc(-0.625rem + 0.6250000625 * (100vw - 62rem) / 25.5);
+    }
+}
+
+@supports (margin-right: clamp( -0.625rem , -2.1446079951rem  +  2.4509806373vw , 0.0000000625rem )) {
+    .arrow_next {
+      margin-right: clamp( -0.625rem , -2.1446079951rem  +  2.4509806373vw , 0.0000000625rem );
+    }
+}
+
+@supports not (margin-right: clamp( -0.625rem , -2.1446079951rem  +  2.4509806373vw , 0.0000000625rem )) {
+    .arrow_next {
+      margin-right: calc(-0.625rem + 0.6250000625 * (100vw - 62rem) / 25.5);
     }
 }
 
@@ -3635,8 +3695,9 @@ textarea.input {
     text-decoration: underline;
   }
 
-  .top-main__button:hover {
-    border: 0.125rem solid #5dbfa5;
+  .top-main__button:hover::before {
+    -webkit-animation: moveArrowMain 0.5s linear forwards;
+            animation: moveArrowMain 0.5s linear forwards;
   }
 
   .slide-vap__button:hover::before {
