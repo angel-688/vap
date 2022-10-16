@@ -829,6 +829,10 @@ textarea.input {
   max-width: 35rem;
 }
 
+.info__block-text:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
 .info__image {
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
@@ -3077,6 +3081,13 @@ textarea.input {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
+  }
+
+  .slide-vap__button {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .services__body {
