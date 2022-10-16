@@ -2377,14 +2377,6 @@ textarea.input {
     padding-right: 6.25rem;
   }
 
-  .info__body_green {
-    padding-top: 0.0000000625rem;
-  }
-
-  .info__body_green {
-    padding-bottom: 0.0000000625rem;
-  }
-
   .info__block-title_image {
     padding-top: 2.8125rem;
   }
@@ -2497,6 +2489,13 @@ textarea.input {
   }
 }
 
+@media (min-width: 20em) {
+  .info__body_green {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+}
+
 @media (min-width: 30em) {
   .actions-header__sign-up {
     padding-left: 1.8125rem;
@@ -2595,14 +2594,6 @@ textarea.input {
 
   .info__body {
     padding-right: 1.25rem;
-  }
-
-  .info__body_green {
-    padding-top: 0.0000000625rem;
-  }
-
-  .info__body_green {
-    padding-bottom: 0.0000000625rem;
   }
 
   .info__block-title_image {
@@ -3178,30 +3169,6 @@ textarea.input {
 @supports not (padding-right: clamp( 1.25rem , -0.1914414414rem  +  7.2072072072vw , 6.25rem )) {
     .info__body {
       padding-right: calc(1.25rem + 5 * (100vw - 20rem) / 69.375);
-    }
-}
-
-@supports (padding-top: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem )) {
-    .info__body_green {
-      padding-top: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem );
-    }
-}
-
-@supports not (padding-top: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem )) {
-    .info__body_green {
-      padding-top: calc(0.0000000625rem + 0 * (100vw - 20rem) / 69.375);
-    }
-}
-
-@supports (padding-bottom: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem )) {
-    .info__body_green {
-      padding-bottom: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem )) {
-    .info__body_green {
-      padding-bottom: calc(0.0000000625rem + 0 * (100vw - 20rem) / 69.375);
     }
 }
 
