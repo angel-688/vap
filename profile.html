@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221109143113">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221109202627">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,8 +32,8 @@
 			</div>
 		</header>
 		<main class="profile-page">
-			<div class="profile">
-				<asile class="profile__side-bar side-bar">
+			<div class="account">
+				<asile class="account__side-bar side-bar">
 					<div class="side-bar__header">
 						<div class="side-bar__avatar"><picture><source srcset="img/profile/avatar.webp" type="image/webp"><img src="img/profile/avatar.png" alt=""></picture></div>
 						<div class="side-bar__name">Здравствуйте,<span>Ахмедов Нрубек Нурбекович</span></div>
@@ -45,11 +45,23 @@
 					<div class="side-bar__pages pages-side">
 						<div class="pages-side__title">Личный кабинет</div>
 						<div class="pages-side__items">
-							<a href="#" class="pages-side__item _icon-profile">Мой профиль</a>
-							<a href="#" class="pages-side__item _icon-business">Мой бизнес</a>
-							<a href="#" class="pages-side__item _icon-notification">Уведомления <span></span></a>
-							<a href="#" class="pages-side__item _icon-ads">Объявления</a>
-							<a href="#" class="pages-side__item _icon-exit">Выход</a>
+							<a href="#" class="pages-side__item">
+								<div class="pages-side__link _icon-profile">Мой профиль</div>
+							</a>
+							<a href="#" class="pages-side__item">
+								<div class="pages-side__link _icon-business">Мой бизнес</div>
+							</a>
+							<a href="#" class="pages-side__item">
+								<div class="pages-side__link _icon-notification">Уведомления
+									<span>10</span>
+								</div>
+							</a>
+							<a href="#" class="pages-side__item">
+								<div class="pages-side__link _icon-ads">Объявления</div>
+							</a>
+							<a href="#" class="pages-side__item">
+								<div class="pages-side__link _icon-exit">Выход</div>
+							</a>
 						</div>
 					</div>
 					<div class="side-bar__footer">
@@ -59,133 +71,139 @@
 						<div class="side-bar__copy">© 2022 — megavet.kz</div>
 					</div>
 				</asile>
-				<div class="profile__main main-profile">
-					<div class="main-profile__container">
-						<div class="main-profile__head">
-							<div class="main-profile__title">Мой профиль.</div>
-							<a href="#" class="main-profile__edit _icon-pencil"></a>
+				<div class="account__main main-account">
+					<div class="main-account__container">
+						<div class="main-account__head">
+							<div class="main-account__title">Мой профиль</div>
+							<a href="#" class="main-account__edit _icon-pencil"></a>
 						</div>
-						<div class="main-profile__body">
-							<div class="main-profile__person persone-profile">
-								<div class="persone-profile__title">Фото профиля</div>
-								<div class="persone-profile__avatar"><picture><source srcset="img/profile/avatar.webp" type="image/webp"><img src="img/profile/avatar.png" alt=""></picture><span></span>
+						<div class="main-account__body">
+							<div class="main-account__person persone-account">
+								<div class="persone-account__title title-account"><span>Фото профиля</span></div>
+								<div class="persone-account__avatar"><picture><source srcset="img/profile/avatar.webp" type="image/webp"><img src="img/profile/avatar.png" alt=""></picture><span></span>
 								</div>
-								<div class="persone-profile__user-name">
-									<div class="persone-profile__surname">Ахмедов</div>
-									<div class="persone-profile__name">Нрубек</div>
-									<div class="persone-profile__patronymic">Нурбекович</div>
+								<div class="persone-account__user-name">
+									<div class="persone-account__surname">Ахмедов</div>
+									<div class="persone-account__name">Нрубек</div>
+									<div class="persone-account__patronymic">Нурбекович</div>
 								</div>
-								<div class="persone-profile__identification">ИИН: 870912600456</div>
+								<div class="persone-account__identification"><span>ИИН:</span> 870912600456</div>
 							</div>
-							<div class="main-profile__info info-profile">
-								<div class="info-profile__title">Основная информация</div>
-								<div data-tabs class="info-profile__tabs tabs-profile">
-									<nav data-tabs-titles class="tabs-profile__navigation">
-										<button type="button" class="tabs-profile__title _tab-active">Данные</button>
-										<button type="button" class="tabs-profile__title">Контакты</button>
-										<button type="button" class="tabs-profile__title">Документы</button>
+							<div class="main-account__info info-account">
+								<div class="info-account__title title-account"><span>Основная информация</span></div>
+								<div data-tabs class="info-account__tabs tabs-account">
+									<nav data-tabs-titles class="tabs-account__navigation">
+										<button type="button" class="tabs-account__title _tab-active">Данные</button>
+										<button type="button" class="tabs-account__title">Контакты</button>
+										<button type="button" class="tabs-account__title">Документы</button>
 									</nav>
-									<div data-tabs-body class="tabs-profile__content">
-										<div class="tabs-profile__body">
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Фамилия</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Отчество</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Город</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Улица</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Имя</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">ИИН</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Район</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Дом</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-										</div>
-										<div class="tabs-profile__body">
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Фамилия</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Отчество</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Город</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Улица</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Имя</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">ИИН</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Район</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Дом</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
+									<div data-tabs-body class="tabs-account__content">
+										<div class="tabs-account__body">
+											<div class="tabs-account__inner">
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Фамилия</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="Ахмедов" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="2" class="tabs-account__label">Отчество</label>
+													<input id="2" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="Нурбекович" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="3" class="tabs-account__label">Город</label>
+													<input id="3" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="Алматы" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="4" class="tabs-account__label">Улица</label>
+													<input id="4" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="Аль-Фараби" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="5" class="tabs-account__label">Имя</label>
+													<input id="5" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="Нурбек" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="6" class="tabs-account__label">ИИН</label>
+													<input id="6" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="870912600456" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="7" class="tabs-account__label">Район</label>
+													<input id="7" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="Бостандынкский" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="8" class="tabs-account__label">Дом</label>
+													<input id="8" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="12/1" class="tabs-account__input">
+												</div>
 											</div>
 										</div>
-										<div class="tabs-profile__body">
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Фамилия</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
+										<div class="tabs-account__body">
+											<div class="tabs-account__inner">
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Фамилия</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Отчество</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Город</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Улица</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Имя</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">ИИН</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Район</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Дом</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
 											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Отчество</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Город</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Улица</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Имя</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">ИИН</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Район</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
-											</div>
-											<div class="tabs-profile__line">
-												<label for="1" class="tabs-profile__label">Дом</label>
-												<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
+										</div>
+										<div class="tabs-account__body">
+											<div class="tabs-account__inner">
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Фамилия</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Отчество</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Город</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Улица</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Имя</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">ИИН</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Район</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
+												<div class="tabs-account__line">
+													<label for="1" class="tabs-account__label">Дом</label>
+													<input id="1" autocomplete="off" type="text" name="form[]" data-error="Ошибка" value="" class="tabs-account__input">
+												</div>
 											</div>
 										</div>
 									</div>
@@ -207,7 +225,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221109143113"></script>
+	<script src="js/app.min.js?_v=20221109202627"></script>
 </body>
 
 </html>
