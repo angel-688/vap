@@ -14,6 +14,26 @@
             document.documentElement.classList.add(className);
         }));
     }
+    let isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+        }
+    };
     function functions_getHash() {
         if (location.hash) return location.hash.replace("#", "");
     }
@@ -4358,6 +4378,16 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
+    window.addEventListener("load", (function() {
+        const parentBlock = document.querySelector(".account");
+        document.addEventListener("click", (function(e) {
+            const target = e.target;
+            if (parentBlock) if (target.closest(".main-account__menu-button")) parentBlock.classList.toggle("_menu-profile-open");
+            if (e.target.closest(".pages-side__item") || e.target.closest(".side-bar__close")) parentBlock.classList.remove("_menu-profile-open");
+            if (!target.closest(".side-bar") && !target.closest(".main-account__menu-button")) parentBlock.classList.remove("_menu-profile-open");
+            if (isMobile.any() && target.closest(".user-profile__name")) document.querySelector(".profile-header__user").classList.toggle("touch-header"); else document.querySelector(".profile-header__user").classList.remove("touch-header");
+        }));
+    }));
     window["FLS"] = true;
     isWebp();
     menuInit();
