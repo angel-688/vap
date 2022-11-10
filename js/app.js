@@ -4384,7 +4384,7 @@
             const target = e.target;
             if (parentBlock) {
                 if (target.closest(".main-account__menu-button")) parentBlock.classList.toggle("_menu-profile-open");
-                bodyLock();
+                bodyLockToggle();
             }
             if (e.target.closest(".pages-side__item") || e.target.closest(".side-bar__close")) {
                 parentBlock.classList.remove("_menu-profile-open");

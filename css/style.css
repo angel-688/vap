@@ -4747,12 +4747,12 @@ textarea.input {
     position: absolute;
     top: 0;
     left: -150%;
-    height: 100%;
+    width: 100%;
     z-index: 5;
+    overflow: auto;
     -webkit-transition: left 0.5s ease 0s;
     -o-transition: left 0.5s ease 0s;
     transition: left 0.5s ease 0s;
-    overflow: auto;
     max-width: 20rem;
   }
 
