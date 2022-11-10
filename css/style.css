@@ -3217,12 +3217,15 @@ textarea.input {
   padding-right: 1.25rem;
 }
 
+.profile-page {
+  position: relative;
+}
+
 .account {
   background-color: #fcfcfc;
 }
 
 .account__container {
-  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 19% 81%;
@@ -4792,6 +4795,20 @@ textarea.input {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
+  }
+
+  .side-bar__pages:not(:last-child) {
+    margin-bottom: 3.125rem;
+  }
+
+  .side-bar__footer {
+    row-gap: 0.9375rem;
+  }
+
+  .pages-side {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
   }
 
   .pages-side__link span {
