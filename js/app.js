@@ -4382,9 +4382,18 @@
         const parentBlock = document.querySelector(".account");
         document.addEventListener("click", (function(e) {
             const target = e.target;
-            if (parentBlock) if (target.closest(".main-account__menu-button")) parentBlock.classList.toggle("_menu-profile-open");
-            if (e.target.closest(".pages-side__item") || e.target.closest(".side-bar__close")) parentBlock.classList.remove("_menu-profile-open");
-            if (!target.closest(".side-bar") && !target.closest(".main-account__menu-button")) parentBlock.classList.remove("_menu-profile-open");
+            if (parentBlock) {
+                if (target.closest(".main-account__menu-button")) parentBlock.classList.toggle("_menu-profile-open");
+                bodyLock();
+            }
+            if (e.target.closest(".pages-side__item") || e.target.closest(".side-bar__close")) {
+                parentBlock.classList.remove("_menu-profile-open");
+                bodyUnlock();
+            }
+            if (!target.closest(".side-bar") && !target.closest(".main-account__menu-button")) {
+                parentBlock.classList.remove("_menu-profile-open");
+                bodyUnlock();
+            }
             if (isMobile.any() && target.closest(".user-profile__name")) document.querySelector(".profile-header__user").classList.toggle("touch-header"); else document.querySelector(".profile-header__user").classList.remove("touch-header");
         }));
     }));
